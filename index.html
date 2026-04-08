@@ -48,7 +48,7 @@
             z-index: 0;
         }
 
-        /* Missing Image Fallbacks (Just in case an image is moved/deleted) */
+        /* Missing Image Fallbacks */
         .img-fallback {
             background-color: transparent;
             border: 1px dashed rgba(207, 181, 59, 0.4);
@@ -149,11 +149,9 @@
         <!-- ========================================== -->
         <section class="relative w-full flex flex-col items-center overflow-hidden bg-dark" style="min-height: 1080px;">
             
-            <!-- Background Geometric Cuts -->
             <div class="bg-cut-left"></div>
             <div class="bg-cut-right"></div>
             
-            <!-- BACKGROUND TRIANGLES (Edge-anchored) -->
             <div class="absolute z-10 w-12 h-20 md:w-20 md:h-32 bg-white hidden md:block" style="clip-path: polygon(100% 0, 0 100%, 100% 100%); top: 25%; left: 2%;"></div>
             <div class="absolute z-10 w-28 h-28 md:w-64 md:h-56 bg-gold" style="clip-path: polygon(100% 0, 0 50%, 100% 100%); top: 45%; left: 0;"></div>
             <div class="absolute z-0 w-12 h-20 md:w-20 md:h-32 bg-white hidden md:block" style="clip-path: polygon(100% 0, 100% 100%, 0 0); top: 42%; left: 8%;"></div>
@@ -161,7 +159,6 @@
             <div class="absolute z-10 w-40 h-40 md:w-80 md:h-72 bg-gold" style="clip-path: polygon(100% 100%, 0 0, 100% 0); top: 50%; right: 0;"></div>
             <div class="absolute z-20 w-64 h-64 md:w-[700px] md:h-[700px] bg-gold" style="clip-path: polygon(0 100%, 100% 100%, 0 0); bottom: -5%; left: -5%;"></div>
 
-            <!-- HEADER TEXT & LOGO -->
             <div class="w-full flex flex-col items-center pt-16 relative z-30 px-4">
                 <div class="mb-10">
                     <img src="Images/Logo.png" class="h-24 md:h-32 object-contain drop-shadow-2xl" alt="Logo" style="width: 140px; height: 140px;">
@@ -171,7 +168,7 @@
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-black uppercase tracking-wide leading-[1.1] mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
                         Welcome To<br><span class="text-gold">IMEC National</span><br>Magazine
                     </h1>
-                    <p class="text-xs sm:text-sm md:text-base text-gray-300 max-w-xl text-center font-medium tracking-wide drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                    <p class="text-xs sm:text-sm md:text-base text-gray-300 max-w-xl text-center font-medium tracking-wide drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] uppercase">
                         Be selected to be featured! In IMEC NATIONAL MAGAZINE,<br>input a new profile!
                     </p>
                 </div>
@@ -179,194 +176,13 @@
 
             <div class="w-full h-8 md:h-16 relative z-30 flex-shrink-0"></div>
 
-            <!-- MAIN ATHLETES IMAGE -->
-            <div class="w-full flex justify-center items-end flex-grow pointer-events-none mt-auto">
+            <div class="w-full flex flex-col justify-center items-center flex-grow pointer-events-none mt-auto pb-10">
                 <div class="relative z-30 inline-block pointer-events-none">
-                    <img src="Images/Home.png" class="h-[55vh] md:h-[65vh] lg:h-[850px] xl:h-[900px] w-auto max-w-[95vw] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] pointer-events-auto relative z-30 block" alt="Athletes">
+                    <img src="Images/Home.png" class="h-[55vh] md:h-[65vh] lg:h-[800px] xl:h-[850px] w-auto max-w-[95vw] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] pointer-events-auto relative z-30 block" alt="Athletes">
                 </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECTION: DEDICATED ATHLETES DATABASE       -->
-        <!-- ========================================== -->
-        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div class="hash-lines md:hidden self-start mb-4">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-
-            <!-- IMAGE BLOCK -->
-            <div class="w-full md:w-3/5 order-2 md:order-1 relative group cursor-pointer" onclick="openLightbox('img-db')">
-                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
-                <img id="img-db" src="Images/Athletes Database.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Athletes Database UI">
-            </div>
-
-            <!-- TEXT BLOCK -->
-            <div class="w-full md:w-2/5 order-1 md:order-2 flex flex-col md:items-start items-center text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide text-white line-tight">Dedicated</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide text-white line-tight mb-2">Athletes</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide text-gold line-tight mb-2">Database</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide stroke-text-gold reveal-text delay-100">Database</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide stroke-text-gold reveal-text delay-200">Database</h2>
-            </div>
-        </section>
-
-        <div class="w-full max-w-[1920px] mx-auto hidden md:flex justify-end px-24 -my-8 z-10 relative pointer-events-none">
-            <div class="hash-lines">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- SECTION: YEARLY TRACKING                   -->
-        <!-- ========================================== -->
-        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div class="hash-lines md:hidden self-start mb-4">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-
-            <!-- TEXT BLOCK -->
-            <div class="w-full md:w-2/5 flex flex-col md:items-start items-center text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Yearly</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-2">Tracking</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-100">Tracking</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-200">Tracking</h2>
-            </div>
-
-            <!-- IMAGE BLOCK -->
-            <div class="w-full md:w-3/5 relative group cursor-pointer" onclick="openLightbox('img-tracking')">
-                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
-                <img id="img-tracking" src="Images/Yearly Tracking.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Yearly Tracking UI">
-            </div>
-        </section>
-
-        <div class="w-full max-w-[1920px] mx-auto hidden md:flex justify-end px-32 -my-8 z-10 relative pointer-events-none">
-            <div class="hash-lines">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- SECTION: ALL SPORTS                        -->
-        <!-- ========================================== -->
-        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div class="hash-lines md:hidden self-start mb-4">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-
-            <!-- IMAGE BLOCK -->
-            <div class="w-full md:w-3/5 order-2 md:order-1 relative group cursor-pointer" onclick="openLightbox('img-sports')">
-                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
-                <img id="img-sports" src="Images/Sports.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="All Sports UI">
-            </div>
-
-            <!-- TEXT BLOCK -->
-            <div class="w-full md:w-2/5 order-1 md:order-2 flex flex-col md:items-start items-center text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">All</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-2">Sports</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-100">Sports</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-200">Sports</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-300">Sports</h2>
-            </div>
-        </section>
-
-        <div class="w-full max-w-[1920px] mx-auto hidden md:flex justify-start px-48 -my-8 z-10 relative pointer-events-none">
-            <div class="hash-lines">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- SECTION: COACHE'S VIEW                     -->
-        <!-- ========================================== -->
-        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div class="hash-lines md:hidden self-start mb-4">
-                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-            </div>
-
-            <!-- TEXT BLOCK -->
-            <div class="w-full md:w-2/5 flex flex-col md:items-start items-center text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Coache's</h2>
-                <div class="flex flex-row gap-4 items-center justify-center md:justify-start">
-                    <h2 class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight">View</h2>
-                    <h2 class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-100">View</h2>
-                </div>
-            </div>
-
-            <!-- IMAGE BLOCK -->
-            <div class="w-full md:w-3/5 relative group cursor-pointer" onclick="openLightbox('img-coach-view')">
-                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
-                <img id="img-coach-view" src="Images/Coach View.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Coache's View UI">
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECTION: ATHLETES VIEW                     -->
-        <!-- ========================================== -->
-        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-[auto_1fr] gap-8 lg:gap-20 relative">
-            
-            <div class="order-1 lg:col-start-1 lg:row-start-1 z-0 relative text-center lg:text-left mb-8 lg:mb-0">
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Athletes</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-2">View</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-100">View</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-200">View</h2>
-                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide stroke-text-gold reveal-text delay-300">View</h2>
-            </div>
-
-            <div class="order-2 lg:col-start-2 lg:row-span-2 relative group cursor-pointer z-30 flex justify-center lg:justify-end items-center" onclick="openLightbox('img-athletes-view')">
-                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
-                <img id="img-athletes-view" src="Images/Athletes View.png" class="w-full max-w-[700px] object-contain shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Athletes View UI">
-            </div>
-
-            <div class="order-3 lg:col-start-1 lg:row-start-2 relative w-full flex justify-center lg:justify-start items-end mt-12 lg:mt-[-100px] xl:mt-[-150px] z-20 pointer-events-none">
-                <div class="absolute right-0 top-1/4 hash-lines hidden lg:flex scale-150 opacity-50 z-0">
-                    <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-                </div>
-                <div class="absolute left-4 lg:left-10 bottom-10 hash-lines scale-125 md:scale-150 opacity-50 z-0">
-                    <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-                </div>
-                
-                <img src="Images/1.png" class="max-h-[600px] lg:max-h-[850px] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative z-10 pointer-events-auto" alt="Athlete">
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECTION: COACH GEORGE                      -->
-        <!-- ========================================== -->
-        <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark">
-            <div class="absolute inset-0 z-0 flex">
-                <div class="w-[80%] lg:w-[45%] h-full bg-gold" style="clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);"></div>
-            </div>
-
-            <div class="absolute left-[-10%] lg:left-[25%] top-[-10%] h-[120%] w-[150px] flex gap-3 transform -skew-x-[20deg] z-0 opacity-90 shadow-2xl pointer-events-none">
-                <div class="w-6 h-full bg-white shadow-lg"></div>
-                <div class="w-16 h-full bg-black shadow-lg"></div>
-                <div class="w-4 h-full bg-gold shadow-lg"></div>
-            </div>
-
-            <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-12 lg:gap-8">
-                
-                <div class="w-full lg:w-7/12 relative group mt-10 lg:mt-0 reveal-text delay-100">
-                    <div class="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/10 border-l-4 border-l-white shadow-[0_30px_60px_rgba(0,0,0,0.8)] p-8 lg:p-14 relative z-10 transition-transform duration-500 hover:-translate-y-2" 
-                         style="clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);">
-                        
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4 tracking-wide">Coach George</h3>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-8">
-                            21 years of experience in<br>personal relationships with<br>thousands of college coaches!
-                        </h2>
-                        
-                        <div class="w-full h-px bg-gradient-to-r from-white/30 to-transparent mb-8"></div>
-                        
-                        <p class="text-sm md:text-base text-gray-300 font-medium leading-relaxed max-w-3xl">
-                            I played collegiate basketball. My three oldest played also—at Virginia Tech, LSU, then Miami, and one son played at #4 JUCO in the country. I've been in recruiting for 25 years on all levels as a parent, successful coach, and elite trainer. The most important thing in my many years of success is to mentor and help students and athletes reach their highest potential. Every athlete is important.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="w-full lg:w-5/12 flex justify-center lg:justify-end relative z-20 reveal-text delay-300">
-                    <div class="absolute inset-0 bg-gold/10 blur-3xl rounded-full scale-75"></div>
-                    <img src="Images/Coach.png" class="max-h-[500px] lg:max-h-[700px] w-auto object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] relative z-10" alt="Coach George">
-                </div>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl text-gold font-black uppercase mt-6 drop-shadow-lg tracking-widest text-center z-30 relative">
+                    Join our team of top prospects.
+                </h3>
             </div>
         </section>
 
@@ -386,47 +202,78 @@
                         </div>
                     </div>
                     <div class="absolute inset-0 bg-white/5 blur-3xl rounded-full scale-90 group-hover:bg-gold/20 transition duration-500 z-10 pointer-events-none"></div>
-                    <img src="Images/Magazine.png" class="w-full max-w-[400px] lg:max-w-[550px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] relative z-20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" alt="Magazine">
+                    <img src="Images/Magazine.png" class="w-full max-w-[400px] lg:max-w-[550px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] relative z-20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" alt="IMEC Magazine Current Cover">
                 </div>
 
                 <div class="w-full lg:w-1/2 order-2 lg:order-1 flex flex-col items-start reveal-text delay-300 relative z-30 pr-8 lg:pr-0">
                     <h2 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-2">Why IMEC</h2>
                     <h2 class="text-5xl md:text-6xl lg:text-7xl font-black text-gold leading-none tracking-tight mb-8">Is the #1</h2>
                     
-                    <p class="text-base text-gray-300 font-medium leading-relaxed mb-10 max-w-lg">
-                        You have made a great decision to join our team. For over 20 years, IMEC has helped thousands of student-athletes achieve their dreams of earning college scholarships.
+                    <p class="text-base md:text-lg text-gray-300 font-medium leading-relaxed mb-10 max-w-lg">
+                        You have made a great decision to join our team. For over 20 years, IMEC has helped thousands of student athletes achieve their dreams of earning college scholarships. We are the number one coaches recruiting magazine in the country.
                     </p>
                     
-                    <div class="flex items-center mb-6 pl-4 border-l-4 border-gold">
-                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide">Our Proven Track Record:</h3>
-                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black text-white uppercase mb-2 tracking-wide">FACTS</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-gold uppercase mb-8 tracking-wide">Our Proven Track Record</h3>
                     
                     <ul class="space-y-6 text-gray-300 font-medium w-full max-w-lg">
                         <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
                             <img src="Images/Rugby.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="NFL">
-                            <span class="leading-snug">36 athletes who made it to the NFL</span>
+                            <span class="leading-snug">36 athletes who made it to the NFL and steadily growing.</span>
                         </li>
                         <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
                             <img src="Images/Basketball.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="NBA">
-                            <span class="leading-snug">4 athletes who reached the NBA</span>
+                            <span class="leading-snug">4 athletes that have reached the NBA.</span>
                         </li>
                         <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
                             <img src="Images/Trophy.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="Trophy">
-                            <span class="leading-snug">Multiple collegiate track & field champions</span>
+                            <span class="leading-snug">Multiple collegiate track and field athletes.</span>
                         </li>
                         <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
                             <img src="Images/Medal.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="Medal">
-                            <span class="leading-snug">Thousands of atheletes on division one!</span>
+                            <span class="leading-snug">Thousands of athletes on division one!</span>
                         </li>
                         <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
-                            <img src="Images/Volley.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="Volleyball">
-                            <span class="leading-snug">Standout athletes in volleyball, baseball, wrestling, and more</span>
-                        </li>
-                        <li class="flex items-start gap-4 hover:text-white transition-colors duration-300 cursor-default">
-                            <img src="Images/Hat.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="Hat">
-                            <span class="leading-snug">Even 8th and 9th graders earning early offers</span>
+                            <img src="Images/Volley.png" class="w-6 h-6 object-contain flex-shrink-0 mt-0.5" alt="Sports">
+                            <span class="leading-snug">Standout athletes in volleyball, baseball, wrestling, and soccer.</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: COACH GEORGE                      -->
+        <!-- ========================================== -->
+        <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark border-t border-gray-800">
+            <div class="absolute inset-0 z-0 flex">
+                <div class="w-full h-full bg-gold" style="clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);"></div>
+            </div>
+
+            <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 flex justify-center relative z-10">
+                
+                <div class="w-full lg:w-10/12 relative group reveal-text delay-100">
+                    <div class="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/10 border-l-4 border-l-white shadow-[0_30px_60px_rgba(0,0,0,0.8)] p-8 md:p-12 lg:p-16 relative z-10 transition-transform duration-500 hover:-translate-y-2" 
+                         style="clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);">
+                        
+                        <!-- Coach Details & Avatar Next To Title -->
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8 text-center sm:text-left">
+                            <img src="Images/Coach.png" class="w-24 sm:w-32 h-auto object-contain shadow-lg flex-shrink-0" alt="Coach George">
+                            <div class="flex flex-col justify-center h-full sm:mt-4">
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-wide uppercase">CEO, Coach George Brown</h3>
+                            </div>
+                        </div>
+                        
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-300 leading-relaxed mb-8 text-center sm:text-left">
+                            <span class="text-gold">Over 20 years of experience.</span> We have gathered personal relationships with thousands of college coaches.
+                        </h2>
+                        
+                        <div class="w-full h-px bg-gradient-to-r from-white/30 to-transparent mb-8"></div>
+                        
+                        <p class="text-sm md:text-base lg:text-lg text-gray-400 font-medium leading-relaxed max-w-4xl italic text-center sm:text-left mx-auto sm:mx-0">
+                            <span class="text-4xl text-gold font-serif leading-none mr-1">"</span>I played collegiate basketball. My three oldest played also - at Virginia Tech, LSU, then Miami, and one son played at #4 JUCO in the country. I've been in recruiting for 25 years on all levels as a parent, successful coach, and elite trainer. The most important thing in my many years of success is to mentor and help students and athletes reach their highest potential. Every athlete is important.<span class="text-4xl text-gold font-serif leading-none ml-1">"</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -435,21 +282,16 @@
         <!-- SECTION: GAME CHANGERS                     -->
         <!-- ========================================== -->
         <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark border-t border-gray-800">
-            
-            <div class="w-full flex justify-center items-end lg:hidden h-[350px] sm:h-[450px] px-4 z-10 relative pointer-events-none mt-8 mb-10">
-                    <img src="Images/Athlete - 3.png" class="h-full w-1/2 object-contain object-bottom drop-shadow-2xl pointer-events-auto" alt="Athlete 3">
-                    <img src="Images/Athlete - 4.png" class="h-full w-1/2 object-contain object-bottom drop-shadow-2xl pointer-events-auto" alt="Athlete 4">
-            </div>
 
             <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 flex flex-col items-center text-center relative z-20">
                 
                 <div class="reveal-text delay-100 z-30 relative px-4 lg:px-32 mt-10 lg:mt-0 flex flex-col items-center">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black uppercase text-white mb-2 tracking-tight">Not Paper Pushers.</h2>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black uppercase text-white mb-2 tracking-tight">IMEC Magazine is not a paper pusher.</h2>
                     <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black uppercase text-gold mb-8 tracking-tight">We're Game Changers.</h2>
                     
                     <div class="bg-[#111] p-6 md:p-8 cut-corner shadow-2xl max-w-4xl mx-auto mb-16 border border-white/5 relative z-30">
                         <p class="text-xs md:text-sm lg:text-base text-gray-300 leading-relaxed font-medium">
-                            A professionally developed print and digital platform featuring just a few hundred standout performers across all sports - giving each one the maximum visibility they deserve.
+                            A professionally developed print and digital platform featuring just 200 athletes - giving each one the maximum visibility they deserve.
                         </p>
                     </div>
                 </div>
@@ -460,7 +302,7 @@
                         <img src="Images/Mark.png" class="h-10 w-10 mb-6 object-contain group-hover:scale-110 transition-transform">
                         <h4 class="text-white font-black text-lg md:text-xl mb-4 uppercase tracking-wide">Targeted Exposure</h4>
                         <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-                            While many recruitment services simply flood college coaches with thousands of athlete profiles...
+                            Recruiting services simply flood college coaches with thousands of athletes' profiles and emails. IMEC National Magazine creates a dedicated magazine just for college coaches' viewing.
                         </p>
                     </div>
                     <div class="bg-[#111] p-8 md:p-10 xl:p-12 relative flex flex-col justify-start text-left shadow-2xl group transition-transform duration-300 hover:-translate-y-2 reveal-text delay-300" 
@@ -468,7 +310,7 @@
                         <img src="Images/Star.png" class="h-10 w-10 mb-6 object-contain group-hover:scale-110 transition-transform">
                         <h4 class="text-white font-black text-lg md:text-xl mb-4 uppercase tracking-wide">Exclusive Features</h4>
                         <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-                            IMEC Magazine features no more than 200 athletes in a full-size, glossy color magazine. this allows maximum exposure for each athlete.
+                            IMEC Magazine features no more than 200 athletes in a full-size glossy color magazine.
                         </p>
                     </div>
                     <div class="bg-[#111] p-8 md:p-10 xl:p-12 relative flex flex-col justify-start text-left shadow-2xl group transition-transform duration-300 hover:-translate-y-2 reveal-text delay-400" 
@@ -476,84 +318,25 @@
                         <img src="Images/Delivery.png" class="h-10 w-10 mb-6 object-contain group-hover:scale-110 transition-transform">
                         <h4 class="text-white font-black text-lg md:text-xl mb-4 uppercase tracking-wide">Direct Delivery</h4>
                         <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-                            Mailed to 800 universities coaches twice per year, coaches, and recruiting personnel.
+                            IMEC Magazine is mailed to 800 college coaches and recruiting personnel yearly through the post office.
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="absolute inset-0 w-full max-w-[1920px] mx-auto hidden lg:block pointer-events-none z-10">
-                    <img src="Images/Athlete - 3.png" class="absolute bottom-0 left-0 xl:left-10 h-[85%] max-h-[800px] object-contain object-bottom drop-shadow-2xl pointer-events-auto" alt="Athlete 3">
-                    <img src="Images/Athlete - 4.png" class="absolute bottom-0 right-0 xl:right-10 h-[90%] max-h-[850px] object-contain object-bottom drop-shadow-2xl pointer-events-auto" alt="Athlete 4">
-            </div>
-
         </section>
 
         <!-- ========================================== -->
-        <!-- SECTION: BEYOND RECRUITMENT                -->
+        <!-- SECTION: DEDICATED ATHLETES DATABASE INTRO -->
         <!-- ========================================== -->
         <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark border-t border-gray-800">
-            <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 relative z-10">
-                
-                <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start relative z-20 mb-12 lg:mb-24">
-                    <div class="w-full lg:w-1/2 text-center lg:text-left reveal-text delay-100 z-30">
-                        <h2 class="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-white uppercase leading-none tracking-tight mb-2">Beyond</h2>
-                        <h2 class="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-gold uppercase leading-none tracking-tight mb-8">Recruitment</h2>
-                        <p class="text-base md:text-lg text-gray-200 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
-                            Not only do we send your information to 800 universities annually, we also mentor and guide you for the entire year!<br>
-                            This includes contacting coaches personally, and advice on camps, nutrition, and guidance.
-                        </p>
-                    </div>
-
-                    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative mt-12 lg:mt-[-50px] z-10 reveal-text delay-200">
-                        <div class="absolute right-10 top-1/4 hash-lines scale-150 opacity-50 z-0">
-                            <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-                        </div>
-                        <img src="Images/Athlete - 5.png" class="max-h-[500px] lg:max-h-[750px] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative z-10" alt="Athlete 5">
-                    </div>
-                </div>
-
-                <div class="flex flex-col lg:flex-row items-end relative z-30">
-                    <div class="w-full lg:w-5/12 flex justify-center lg:justify-start relative z-10 mb-[-40px] lg:mb-[-80px] lg:mr-[-10%] reveal-text delay-300">
-                        <div class="absolute left-10 bottom-1/4 hash-lines scale-150 opacity-50 z-0">
-                            <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
-                        </div>
-                        <img src="Images/Athlete - 6.png" class="max-h-[500px] lg:max-h-[700px] object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] relative z-10" alt="Athlete 6">
-                    </div>
-
-                    <div class="w-full lg:w-8/12 bg-gold text-black p-8 md:p-12 lg:p-16 relative z-30 shadow-2xl reveal-text delay-400 cut-corner">
-                        <h4 class="font-black text-sm md:text-base italic mb-6 uppercase tracking-wide leading-relaxed">
-                            Coaches and parents will be able to view IMEC athletes on our own dedicated database to view athletes progress and videos throughout the year.
-                        </h4>
-                        <p class="font-bold text-sm md:text-base italic mb-4">
-                            Profile page will consist of: Professionally developed profiles grouped by sport and gender will include the following attributes for each athlete:
-                        </p>
-                        <ul class="text-sm md:text-base space-y-2 font-bold italic mb-6">
-                            <li>- Athletic strengths and achievements, academic goals, community contributions, and leadership qualities</li>
-                            <li>- Multiple hi-resolution photos of athletic feats</li>
-                            <li>- Contact information, social media profiles, and mailing addresses for immediate communication</li>
-                            <li>- Video footage of athlete</li>
-                        </ul>
-                        <p class="text-sm md:text-base italic font-bold leading-relaxed">
-                            But we don't stop at recruitment. IMEC also operates a state-of-the-art training facility in Cincinnati, Ohio, where athletes are coached to improve athleticism, discipline, teamwork, and academics. Our reputation and relationships with college coaches make us a trusted name in the world of athletic development and recruiting. At IMEC, we provide the edge athletes need to stand out, compete, and win—on and off the field.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECTION: DEDICATED ATHLETES DATABASE #2    -->
-        <!-- ========================================== -->
-        <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark">
             <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-12 lg:gap-16">
                 
                 <div class="w-full lg:w-1/2 flex flex-col items-start reveal-text delay-100 z-30">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-2">Dedicated Athletes</h2>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-gold uppercase tracking-tight mb-8">Database</h2>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-2">IMEC’s Athlete Dedicated</h2>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-gold uppercase tracking-tight mb-6">Database</h2>
                     
-                    <p class="text-base text-gray-300 font-medium leading-relaxed mb-6 max-w-lg">
-                        Coaches and parents will be able to view IMEC athletes on our own dedicated database to view athletes' progress.
+                    <p class="text-base md:text-lg text-gray-300 font-normal leading-relaxed mb-8 max-w-lg font-sans">
+                        This is where coaches, athletes, and parents log in to view our athletes.
                     </p>
                     
                     <div class="flex items-center mb-10 pl-4 border-l-2 border-gold">
@@ -588,11 +371,233 @@
         </section>
 
         <!-- ========================================== -->
+        <!-- SECTION: DATABASE FEATURES (TRACKING)      -->
+        <!-- Mobile Flow: Title -> Image -> Text        -->
+        <!-- ========================================== -->
+        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-6 md:gap-20">
+            
+            <!-- Title (Desktop Left, Mobile Top) -->
+            <div class="w-full md:w-2/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-1">
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Yearly</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-4">Tracking</h2>
+                
+                <!-- Desktop Text -->
+                <p class="hidden md:block text-lg md:text-xl text-gray-300 font-bold leading-relaxed max-w-lg mb-4 reveal-text delay-100">
+                    Find your athlete. Search the year specifically for your athlete.
+                </p>
+            </div>
+
+            <!-- Image Block (Desktop Right, Mobile Middle) -->
+            <div class="w-full md:w-3/5 relative group cursor-pointer order-2 md:order-2" onclick="openLightbox('img-tracking')">
+                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
+                <img id="img-tracking" src="Images/Yearly Tracking.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Yearly Tracking UI">
+            </div>
+
+            <!-- Mobile Text (Hidden on Desktop, Mobile Bottom) -->
+            <div class="w-full block md:hidden order-3 text-center mt-4">
+                <p class="text-base text-gray-300 font-normal leading-relaxed reveal-text delay-100">
+                    Find your athlete. Search the year specifically for your athlete.
+                </p>
+            </div>
+        </section>
+
+        <div class="w-full max-w-[1920px] mx-auto hidden md:flex justify-end px-32 -my-8 z-10 relative pointer-events-none">
+            <div class="hash-lines">
+                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SECTION: DATABASE FEATURES (SPORTS)        -->
+        <!-- Mobile Flow: Title -> Image -> Text        -->
+        <!-- ========================================== -->
+        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-6 md:gap-20">
+            
+            <!-- Image Block (Desktop Left, Mobile Middle) -->
+            <div class="w-full md:w-3/5 relative group cursor-pointer order-2 md:order-1" onclick="openLightbox('img-sports')">
+                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
+                <img id="img-sports" src="Images/Sports.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="All Sports UI">
+            </div>
+
+            <!-- Title (Desktop Right, Mobile Top) -->
+            <div class="w-full md:w-2/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Choose</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-4">Any Sport</h2>
+                
+                <!-- Desktop Text -->
+                <p class="hidden md:block text-lg md:text-xl text-gray-300 font-bold leading-relaxed max-w-lg mb-4 reveal-text delay-100">
+                    IMEC has athletes in all sports.
+                </p>
+            </div>
+
+            <!-- Mobile Text (Hidden on Desktop, Mobile Bottom) -->
+            <div class="w-full block md:hidden order-3 text-center mt-4">
+                <p class="text-base text-gray-300 font-normal leading-relaxed reveal-text delay-100">
+                    IMEC has athletes in all sports.
+                </p>
+            </div>
+        </section>
+
+        <div class="w-full max-w-[1920px] mx-auto hidden md:flex justify-start px-48 -my-8 z-10 relative pointer-events-none">
+            <div class="hash-lines">
+                <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SECTION: DATABASE FEATURES (COACHES VIEW)  -->
+        <!-- Mobile Flow: Title -> Image -> Text        -->
+        <!-- ========================================== -->
+        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-6 md:gap-20">
+            
+            <!-- Title (Desktop Left, Mobile Top) -->
+            <div class="w-full md:w-2/5 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-1">
+                <h2 class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Coaches</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-4">View</h2>
+                
+                <!-- Desktop Text -->
+                <p class="hidden md:block text-lg md:text-xl text-gray-300 font-bold leading-relaxed max-w-lg reveal-text delay-100">
+                    This is how coaches view athletes.
+                </p>
+            </div>
+
+            <!-- Image Block (Desktop Right, Mobile Middle) -->
+            <div class="w-full md:w-3/5 relative group cursor-pointer order-2 md:order-2" onclick="openLightbox('img-coach-view')">
+                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
+                <img id="img-coach-view" src="Images/Coach View.png" class="w-full object-contain cut-corner shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Coaches View UI">
+            </div>
+
+            <!-- Mobile Text (Hidden on Desktop, Mobile Bottom) -->
+            <div class="w-full block md:hidden order-3 text-center mt-4">
+                <p class="text-base text-gray-300 font-normal leading-relaxed reveal-text delay-100">
+                    This is how coaches view athletes.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: DATABASE FEATURES (ATHLETES VIEW) -->
+        <!-- Mobile Flow: Title -> Image -> Text        -->
+        <!-- ========================================== -->
+        <section class="w-full max-w-[1920px] mx-auto py-24 px-4 md:px-12 lg:px-24 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-[auto_1fr] gap-6 lg:gap-20 relative">
+            
+            <!-- Title (Desktop Top Left, Mobile Top) -->
+            <div class="order-1 lg:col-start-1 lg:row-start-1 z-0 relative text-center lg:text-left">
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-white line-tight mb-2">Athletes</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-black uppercase tracking-wide text-gold line-tight mb-4">View</h2>
+                
+                <!-- Desktop Text -->
+                <p class="hidden md:block text-lg md:text-xl text-gray-300 font-bold leading-relaxed max-w-lg mx-auto lg:mx-0 reveal-text delay-100">
+                    Athletes View of Database.
+                </p>
+            </div>
+
+            <!-- Image Block (Desktop Right spanning rows, Mobile Middle) -->
+            <div class="order-2 lg:col-start-2 lg:row-span-2 relative group cursor-pointer z-30 flex justify-center lg:justify-end items-center" onclick="openLightbox('img-athletes-view')">
+                <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full group-hover:bg-gold/40 transition duration-500"></div>
+                <img id="img-athletes-view" src="Images/Athletes View.png" class="w-full max-w-[700px] object-contain shadow-2xl relative z-10 group-hover:scale-[1.02] transition-transform duration-300" alt="Athletes View UI">
+            </div>
+
+            <!-- Mobile Text (Hidden on Desktop, Mobile Bottom) -->
+            <div class="w-full block md:hidden order-3 text-center mt-4">
+                <p class="text-base text-gray-300 font-normal leading-relaxed reveal-text delay-100">
+                    Athletes View of Database.
+                </p>
+            </div>
+
+            <!-- Floating Athlete Image -->
+            <div class="order-4 lg:col-start-1 lg:row-start-2 relative w-full flex justify-center lg:justify-start items-end mt-8 lg:mt-12 z-20 pointer-events-none hidden md:flex">
+                <div class="absolute right-0 top-1/4 hash-lines hidden lg:flex scale-150 opacity-50 z-0">
+                    <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+                </div>
+                <div class="absolute left-4 lg:left-10 bottom-10 hash-lines scale-125 md:scale-150 opacity-50 z-0">
+                    <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+                </div>
+                
+                <img src="Images/1.png" class="max-h-[500px] lg:max-h-[850px] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative z-10 pointer-events-auto" alt="Athlete">
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: WE EXPOSE RISING STARS            -->
+        <!-- ========================================== -->
+        <section class="w-full max-w-[1920px] mx-auto py-16 md:py-24 px-4 md:px-12 lg:px-24 flex flex-col items-center justify-center bg-dark">
+            
+            <!-- Title for mobile (Top) -->
+            <h2 class="md:hidden text-4xl sm:text-5xl font-black uppercase tracking-wide text-white mb-8 drop-shadow-lg text-center reveal-text delay-100">We Expose<br><span class="text-gold">Rising Stars</span></h2>
+
+            <!-- Side-by-side images wrapper -->
+            <div class="w-full flex flex-row items-center justify-between gap-4 md:gap-10 max-w-7xl reveal-text delay-300">
+                
+                <!-- Left Image -->
+                <img src="Images/Athlete - 3.png" class="w-1/2 md:w-auto h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] object-contain object-bottom drop-shadow-2xl" alt="Athlete 3">
+
+                <!-- Desktop Title (Middle) -->
+                <h2 class="hidden md:block text-5xl lg:text-6xl xl:text-[5rem] font-black uppercase tracking-wide text-white drop-shadow-lg text-center whitespace-nowrap px-4">We Expose<br><span class="text-gold">Rising Stars</span></h2>
+
+                <!-- Right Image -->
+                <img src="Images/Athlete - 4.png" class="w-1/2 md:w-auto h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] object-contain object-bottom drop-shadow-2xl" alt="Athlete 4">
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION: BEYOND RECRUITMENT                -->
+        <!-- ========================================== -->
+        <section class="w-full relative py-20 lg:py-32 overflow-hidden bg-dark border-t border-gray-800">
+            <div class="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 relative z-10">
+                
+                <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start relative z-20 mb-12 lg:mb-24">
+                    <div class="w-full lg:w-1/2 text-center lg:text-left reveal-text delay-100 z-30">
+                        <h2 class="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-white uppercase leading-none tracking-tight mb-2">Beyond</h2>
+                        <h2 class="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-gold uppercase leading-none tracking-tight mb-8">Recruitment</h2>
+                        <p class="text-base md:text-lg text-gray-200 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
+                            Not only do we send your information to 800 universities annually, we also mentor and guide you for the entire year!<br><br>
+                            This includes contacting coaches personally, and advice on camps, nutrition, and guidance.
+                        </p>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative mt-12 lg:mt-[-50px] z-10 reveal-text delay-200">
+                        <div class="absolute right-10 top-1/4 hash-lines scale-150 opacity-50 z-0">
+                            <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+                        </div>
+                        <img src="Images/Athlete - 5.png" class="max-h-[500px] lg:max-h-[750px] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative z-10" alt="Athlete 5">
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-end relative z-30">
+                    <div class="w-full lg:w-5/12 flex justify-center lg:justify-start relative z-10 mb-[-40px] lg:mb-[-80px] lg:mr-[-10%] reveal-text delay-300">
+                        <div class="absolute left-10 bottom-1/4 hash-lines scale-150 opacity-50 z-0">
+                            <div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div><div class="hash-line"></div>
+                        </div>
+                        <img src="Images/Athlete - 6.png" class="max-h-[500px] lg:max-h-[700px] object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] relative z-10" alt="Athlete 6">
+                    </div>
+
+                    <div class="w-full lg:w-8/12 bg-gold text-black p-8 md:p-12 lg:p-16 relative z-30 shadow-2xl reveal-text delay-400 cut-corner">
+                        <h4 class="font-black text-sm md:text-base italic mb-6 uppercase tracking-wide leading-relaxed">
+                            Coaches and parents will be able to view IMEC athletes on our own dedicated database to view athletes progress and videos throughout the year.
+                        </h4>
+                        <p class="font-bold text-sm md:text-base italic mb-4">
+                            Profile page will consist of: Professionally developed profiles grouped by sport and gender will include the following attributes for each athlete:
+                        </p>
+                        <ul class="text-sm md:text-base space-y-2 font-bold italic mb-6">
+                            <li>- Athletic strengths and achievements, academic goals, community contributions, and leadership qualities</li>
+                            <li>- Multiple hi-resolution photos of athletic feats</li>
+                            <li>- Contact information, social media profiles, and mailing addresses for immediate communication</li>
+                            <li>- Video footage of athlete</li>
+                        </ul>
+                        <p class="text-sm md:text-base italic font-bold leading-relaxed">
+                            But we don't stop at recruitment. IMEC also operates a state-of-the-art training facility in Cincinnati, Ohio, where athletes are coached to improve athleticism, discipline, teamwork, and academics. Our reputation and relationships with college coaches make us a trusted name in the world of athletic development and recruiting. At IMEC, we provide the edge athletes need to stand out, compete, and win - on and off the field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
         <!-- SECTION: CONTACT INFO & FOOTER             -->
         <!-- ========================================== -->
-        <section class="w-full relative py-32 overflow-hidden bg-dark">
+        <section class="w-full relative py-20 overflow-hidden bg-dark">
             
-            <!-- Abstract Background Shapes & Angles -->
             <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <div class="absolute bottom-[-10%] left-[-10%] w-[60%] h-[80%] bg-gold transform rotate-[15deg] origin-bottom-left shadow-2xl"></div>
                 <div class="absolute bottom-[-20%] left-[10%] w-[30%] h-[60%] bg-white transform rotate-[30deg] origin-bottom-left shadow-2xl"></div>
@@ -600,22 +605,20 @@
                 <div class="absolute top-[30%] right-0 w-[30%] h-[80%] bg-black transform -rotate-[20deg] origin-top-right shadow-2xl"></div>
             </div>
 
-            <!-- Main Contact Card -->
-            <div class="relative z-20 w-full max-w-[90%] md:max-w-4xl mx-auto bg-gold text-black px-6 py-12 md:p-16 text-center shadow-[0_30px_60px_rgba(0,0,0,0.8)] reveal-text delay-200 cut-corner">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-4 tracking-wide uppercase">CONTACT INFO</h2>
-                <p class="font-bold text-sm md:text-base lg:text-lg mb-8 max-w-xl mx-auto leading-relaxed uppercase">
+            <div class="relative z-20 w-full max-w-[90%] md:max-w-2xl mx-auto bg-gold text-black px-6 py-8 md:p-10 text-center shadow-[0_20px_40px_rgba(0,0,0,0.6)] reveal-text delay-200 cut-corner">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-3 tracking-wide uppercase">CONTACT INFO</h2>
+                <p class="font-bold text-xs md:text-sm lg:text-base mb-6 max-w-lg mx-auto leading-relaxed uppercase">
                     Be selected to be featured! In IMEC NATIONAL MAGAZINE,<br class="hidden md:block">input a new profile!
                 </p>
-                <h3 class="text-2xl md:text-3xl lg:text-4xl font-black mb-2 tracking-wide">Call: 1-800-506-8308</h3>
-                <h3 class="text-2xl md:text-3xl lg:text-4xl font-black mb-10 tracking-wide">Text: (513) 824-2941</h3>
+                <h3 class="text-xl md:text-2xl lg:text-3xl font-black mb-1 tracking-wide">Call: 1-800-506-8308</h3>
+                <h3 class="text-xl md:text-2xl lg:text-3xl font-black mb-8 tracking-wide">Text: (513) 824-2941</h3>
                 
-                <a href="#" class="inline-block bg-[#0a0a0a] text-white px-10 py-4 transform -skew-x-[15deg] hover:bg-[#1a1a1a] transition-colors duration-300 shadow-xl group">
-                    <span class="block transform skew-x-[15deg] font-black text-lg md:text-xl tracking-wider group-hover:text-gold transition-colors duration-300">REGISTER NOW</span>
+                <a href="#" class="inline-block bg-[#0a0a0a] text-white px-8 py-3 transform -skew-x-[15deg] hover:bg-[#1a1a1a] transition-colors duration-300 shadow-xl group">
+                    <span class="block transform skew-x-[15deg] font-black text-base md:text-lg tracking-wider group-hover:text-gold transition-colors duration-300">REGISTER NOW</span>
                 </a>
             </div>
         </section>
 
-        <!-- Footer Block -->
         <footer class="w-full bg-[#050505] py-8 text-center border-t border-white/5 relative z-20">
             <p class="text-gray-500 text-xs md:text-sm font-medium tracking-[0.2em] uppercase">
                 &copy; 2026 IMEC.ME - ALL RIGHTS RESERVED.
@@ -624,21 +627,15 @@
 
     </main>
 
-    <!-- ========================================== -->
-    <!-- INTERACTIVE SCRIPTS                        -->
-    <!-- ========================================== -->
     <script>
-        // Add visual fallback (transparent border) if images are missing from the folder
         document.querySelectorAll('img').forEach(img => {
             img.onerror = function() {
                 this.classList.add('img-fallback');
-                // Icon styling fallbacks
                 if(this.src.includes('Rugby') || this.src.includes('Basketball') || this.src.includes('Trophy') || this.src.includes('Medal') || this.src.includes('Volley') || this.src.includes('Hat') || this.src.includes('Mark') || this.src.includes('Star') || this.src.includes('Delivery') || this.src.includes('Checkboard') || this.src.includes('Video') || this.src.includes('Contact') || this.src.includes('Photo')) {
                     this.style.minHeight = '32px';
                     this.style.width = '32px';
                     this.style.backgroundColor = 'rgba(207, 181, 59, 0.2)';
                 } 
-                // UI image block styling fallbacks
                 else if(this.id === 'img-db' || this.id === 'img-tracking' || this.id === 'img-sports' || this.id === 'img-coach-view' || this.id === 'img-athletes-view') {
                     this.style.minHeight = '300px';
                     this.style.width = '100%';
@@ -647,7 +644,6 @@
             };
         });
 
-        // --- SCROLL ANIMATION LOGIC ---
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
@@ -658,7 +654,6 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 } else {
-                    // Remove class when scrolling out so it animates again when scrolling back
                     entry.target.classList.remove('visible');
                 }
             });
@@ -668,7 +663,6 @@
             observer.observe(el);
         });
 
-        // --- LIGHTBOX LOGIC ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -677,16 +671,13 @@
             if(targetImg && targetImg.src) {
                 lightboxImg.src = targetImg.src;
                 lightbox.classList.add('lightbox-visible');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling background
+                document.body.style.overflow = 'hidden'; 
             }
         }
 
         function closeLightbox(event) {
-            // Prevent closing if they clicked the image itself (handled by stopPropagation on img tag)
             lightbox.classList.remove('lightbox-visible');
-            document.body.style.overflow = 'auto'; // Restore scrolling
-            
-            // Clear src after animation ends to prevent glitching on next open
+            document.body.style.overflow = 'auto'; 
             setTimeout(() => {
                 if(!lightbox.classList.contains('lightbox-visible')) {
                     lightboxImg.src = '';
